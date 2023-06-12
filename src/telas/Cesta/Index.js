@@ -3,7 +3,7 @@ import { StyleSheet, View } from "react-native";
 import Top from "./Components/Top";
 import Details from "./Components/Details";
 
-export default function Cesta({ top, details }) {
+export default function Basket({ top, details }) {
   return (
     <>
       <Top {...top} />

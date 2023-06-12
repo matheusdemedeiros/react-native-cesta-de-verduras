@@ -1,26 +1,36 @@
-import { SafeAreaView, StatusBar, View } from "react-native";
-import Cesta from "./src/telas/Cesta/Index";
+import { useCallback } from "react";
+import { SafeAreaView, StatusBar } from "react-native";
+import * as SplashScreen from "expo-splash-screen";
 import {
   useFonts,
   Montserrat_400Regular,
   Montserrat_700Bold,
 } from "@expo-google-fonts/montserrat";
+
+import Basket from "./src/telas/Cesta/Index";
 import mock from "./src/mocks/Cesta";
 
+SplashScreen.preventAutoHideAsync();
+
 export default function App() {
-  const [fontLoaded] = useFonts({
+  const [loadedFont] = useFonts({
     MontserratRegular: Montserrat_400Regular,
     MontserratBold: Montserrat_700Bold,
   });
 
-  if (!fontLoaded) {
-    return <View />;
-  }
+  const onLayoutRootView = useCallback(async () => {
+    if (loadedFont) {
+      // This tells the splash screen to hide immediately
+      await SplashScreen.hideAsync();
+    }
+  }, [loadedFont]);
+
+  if (!loadedFont) return null;
 
   return (
-    <SafeAreaView>
+    <SafeAreaView onLayout={onLayoutRootView}>
       <StatusBar />
-      <Cesta {...mock} />
+      <Basket {...mock} />
     </SafeAreaView>
   );
 }

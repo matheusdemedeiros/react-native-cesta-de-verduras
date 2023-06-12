@@ -3,10 +3,10 @@ import { Text, StyleSheet } from "react-native";
 
 export default function AppText({ children, style }) {
   let styleSetted = styles.text;
-  if(style?.fontWeight === "bold"){
+  if (style?.fontWeight === "bold") {
     styleSetted = styles.textBold;
   }
-  
+
   return <Text style={[style, styleSetted]}>{children}</Text>;
 }
 
