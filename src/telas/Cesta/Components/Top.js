@@ -3,11 +3,11 @@ import { Image, StyleSheet, Dimensions } from "react-native";
 import AppText from "../../../components/Text";
 import topo from "../../../../assets/topo.png";
 
-export default function Top() {
+export default function Top({title}) {
   return (
     <>
       <Image source={topo} style={styles.top} />
-      <AppText style={styles.title}>Detalhe da cesta</AppText>
+      <AppText style={styles.title}>{title}</AppText>
     </>
   );
 }

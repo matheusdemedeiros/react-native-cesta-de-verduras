@@ -3,13 +3,13 @@ import { StyleSheet, View } from "react-native";
 import Top from "./Components/Top";
 import Details from "./Components/Details";
 
-export default function Cesta() {
+export default function Cesta({ top, details }) {
   return (
     <>
-      <Top />
+      <Top {...top} />
 
       <View style={styles.basket}>
-        <Details />
+        <Details {...details} />
       </View>
     </>
   );
