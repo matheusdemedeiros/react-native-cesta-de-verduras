@@ -1,6 +1,6 @@
 import React from "react";
 import { Image, StyleSheet, Dimensions } from "react-native";
-import AppText from "../../../components/Text";
+import AppText from "../../../components/AppText";
 import topo from "../../../../assets/topo.png";
 
 export default function Top({ title }) {

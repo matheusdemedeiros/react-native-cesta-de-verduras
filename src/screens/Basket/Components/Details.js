@@ -1,7 +1,8 @@
 import React from "react";
 import { View, StyleSheet, Image, TouchableOpacity } from "react-native";
 
-import AppText from "../../../components/Text";
+import AppText from "../../../components/AppText";
+import AppButton from "../../../components/AppButton";
 
 export default function Details({
   basketName,
@@ -23,9 +24,7 @@ export default function Details({
       <AppText style={styles.basketDescription}>{basketDescription}</AppText>
       <AppText style={styles.basketPrice}>{basketPrice}</AppText>
 
-      <TouchableOpacity style={styles.buyButton}>
-        <AppText style={styles.buyButtonText}>{buyButton} </AppText>
-      </TouchableOpacity>
+      <AppButton text={buyButton}></AppButton>
     </>
   );
 }
@@ -74,6 +73,5 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
     lineHeight: 26,
-
   },
 });
