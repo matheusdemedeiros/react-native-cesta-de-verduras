@@ -11,11 +11,11 @@ export default function App() {
     MontserratRegular: Montserrat_400Regular,
     MontserratBold: Montserrat_700Bold,
   });
-  
-  if(!fontLoaded){
-    return <View />
+
+  if (!fontLoaded) {
+    return <View />;
   }
-  
+
   return (
     <SafeAreaView>
       <StatusBar />
