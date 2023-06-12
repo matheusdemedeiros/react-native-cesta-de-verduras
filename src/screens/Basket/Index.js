@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
+
 import Top from "./Components/Top";
 import Details from "./Components/Details";
 

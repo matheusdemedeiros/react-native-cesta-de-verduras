@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, Image } from "react-native";
+import { View, StyleSheet, Image, TouchableOpacity } from "react-native";
 
 import AppText from "../../../components/Text";
 
@@ -9,6 +9,7 @@ export default function Details({
   basketPrice,
   farmLogo,
   farmName,
+  buyButton,
 }) {
   return (
     <>
@@ -20,8 +21,11 @@ export default function Details({
       </View>
 
       <AppText style={styles.basketDescription}>{basketDescription}</AppText>
-
       <AppText style={styles.basketPrice}>{basketPrice}</AppText>
+
+      <TouchableOpacity style={styles.buyButton}>
+        <AppText style={styles.buyButtonText}>{buyButton} </AppText>
+      </TouchableOpacity>
     </>
   );
 }
@@ -57,5 +61,19 @@ const styles = StyleSheet.create({
     fontSize: 26,
     lineHeight: 42,
     marginTop: 8,
+  },
+  buyButton: {
+    marginTop: 16,
+    backgroundColor: "#2A9F85",
+    paddingVertical: 16,
+    borderRadius: 6,
+  },
+  buyButtonText: {
+    textAlign: "center",
+    color: "#FFFFFF",
+    fontSize: 16,
+    fontWeight: "bold",
+    lineHeight: 26,
+
   },
 });

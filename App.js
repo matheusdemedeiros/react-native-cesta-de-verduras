@@ -7,8 +7,8 @@ import {
   Montserrat_700Bold,
 } from "@expo-google-fonts/montserrat";
 
-import Basket from "./src/telas/Cesta/Index";
-import mock from "./src/mocks/Cesta";
+import Basket from "./src/screens/Basket/Index";
+import mock from "./src/mocks/Basket";
 
 SplashScreen.preventAutoHideAsync();
 
